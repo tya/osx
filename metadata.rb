@@ -1,7 +1,6 @@
-maintainer       "Joshua Timberman"
-maintainer_email "cookbooks@housepub.org"
+maintainer       "Alex Howells"
+maintainer_email "alex@howells.me"
 license          "Apache 2.0"
-description      "Manage OS X user defaults settings"
-long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          "1.4.2"
+description      "Manage OSX application and system settings"
+version          "2.0.0"
 supports         "mac_os_x"
