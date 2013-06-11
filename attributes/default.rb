@@ -16,6 +16,13 @@ default['owner']['email'] = "unknown@email"   # message on the login screen.
 default['owner']['phone'] = "555 123-4567"
 default['owner']['company'] = "Thank You"
 
+# Accessibility
+default['osx']['settings']['accessibility']['cursor_size'] = '1.5'
+default['osx']['settings']['accessibility']['zoom_hotkeys'] = true
+default['osx']['settings']['accessibility']['zoom_scroll'] = true
+default['osx']['settings']['accessibility']['zoom_smooth_images'] = true
+default['osx']['settings']['accessibility']['zoom_panning_mode'] = '0'
+
 # Desktop Services
 default['osx']['settings']['desktopservices']['disable_ds_store_network'] = true
 
@@ -29,6 +36,7 @@ default['osx']['settings']['dock']['shadows'] = false
 default['osx']['settings']['dock']['minimize_effect'] = "scale"
 default['osx']['settings']['dock']['iconsize_normal'] = '40'
 default['osx']['settings']['dock']['iconsize_magnified'] = '96'
+default['osx']['settings']['dock']['disable_spaces_swoosh'] = true
 
 # Finder
 default['osx']['settings']['finder']['warnonextchange'] = false
@@ -42,6 +50,9 @@ default['osx']['settings']['finder']['window']['showallfiles'] = false
 default['osx']['settings']['finder']['window']['showposixpath'] = true
 default['osx']['settings']['finder']['window']['showpathbar'] = true
 default['osx']['settings']['finder']['window']['showstatusbar'] = true
+
+# Firewall
+default['osx']['settings']['firewall']['enabled'] = true
 
 # Global Settings
 default['osx']['settings']['global']['expanded-save-dialogs'] = true

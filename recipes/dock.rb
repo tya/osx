@@ -80,3 +80,11 @@ osx_userdefaults "Dock :: Icon Size (Magnified)" do
   value node['osx']['settings']['dock']['iconsize_magnified']
   notifies :run, 'execute[killall Dock]', :delayed
 end
+
+osx_userdefaults "Dock :: Disable animated transition between Spaces" do
+  domain "com.apple.dock"
+  key "workspaces-swoosh-animation-off"
+  type "bool"
+  value node['osx']['settings']['dock']['disable_spaces_swoosh']
+  notifies :run, 'execute[killall Dock]', :delayed
+end
