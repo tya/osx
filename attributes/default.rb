@@ -36,6 +36,7 @@ default['osx']['settings']['dock']['minimize_effect'] = "scale"
 default['osx']['settings']['dock']['iconsize_normal'] = '40'
 default['osx']['settings']['dock']['iconsize_magnified'] = '96'
 default['osx']['settings']['dock']['disable_spaces_swoosh'] = true
+default['osx']['settings']['dock']['orientation'] = 'bottom'		# options: bottom, left, right
 
 # Finder
 default['osx']['settings']['finder']['warnonextchange'] = false

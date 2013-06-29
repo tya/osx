@@ -88,3 +88,11 @@ osx_userdefaults "Dock :: Disable animated transition between Spaces" do
   value node['osx']['settings']['dock']['disable_spaces_swoosh']
   notifies :run, 'execute[killall Dock]', :delayed
 end
+
+osx_userdefaults "Dock :: Position of the Dock on screen" do
+  domain "com.apple.dock"
+  key "orientation"
+  type "string"
+  value node['osx']['settings']['dock']['orientation']
+  notifies :run, 'execute[killall Dock]', :delayed
+end
