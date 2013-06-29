@@ -13,7 +13,6 @@ default['osx']['settings'] = {}
 # Owner Information
 default['owner']['name'] = "Unknown Name"     # Used to print a 'good samaritan'
 default['owner']['email'] = "unknown@email"   # message on the login screen.
-default['owner']['phone'] = "555 123-4567"
 default['owner']['company'] = "Thank You"
 
 # Accessibility
@@ -74,7 +73,7 @@ default['osx']['settings']['launchservices']['quarantine'] = false
 # Login Window
 default['osx']['settings']['login_window']['message_enabled'] = true
 default['osx']['settings']['login_window']['message_nvram'] = true
-default['osx']['settings']['login_window']['message_text'] = "#{node.owner.name} :: Found this computer? Please call #{node.owner.phone} or e-mail #{node.owner.email} :: #{node.owner.company}"
+default['osx']['settings']['login_window']['message_text'] = "#{node.owner.name} :: If found please e-mail '#{node.owner.email}' :: #{node.owner.company}"
 
 # Screensaver
 default['osx']['settings']['screensaver']['enabled'] = true
