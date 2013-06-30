@@ -37,3 +37,12 @@ execute "sudo touch /System/Library/Caches/com.apple.corestorage/EFILoginLocaliz
   action :nothing
   only_if { File.exist?("/System/Library/Caches/com.apple.corestorage/EFILoginLocalizations") }
 end
+
+osx_userdefaults "Login Window :: Show additional info when clicking on clock" do
+  domain "/Library/Preferences/com.apple.loginwindow"
+  key "AdminHostInfo"
+  type "string"
+  value "HostInfo"
+  only_if { node['osx']['settings']['login_window']['admin_info'] }
+  sudo true
+end
