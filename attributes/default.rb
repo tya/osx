@@ -50,6 +50,7 @@ default['osx']['settings']['finder']['window']['showallfiles'] = false
 default['osx']['settings']['finder']['window']['showposixpath'] = true
 default['osx']['settings']['finder']['window']['showpathbar'] = true
 default['osx']['settings']['finder']['window']['showstatusbar'] = true
+default['osx']['settings']['finder']['window']['viewing-mode'] = "Nlsv"
 
 # Firewall
 default['osx']['settings']['firewall']['enabled'] = true
@@ -66,6 +67,9 @@ default['osx']['settings']['global']['sidebar-icon-size'] = '1'
 default['osx']['settings']['global']['highlight-color'] = "0.764700 0.976500 0.568600"
 default['osx']['settings']['global']['scrollbars-visibility'] = "WhenScrolling"
 
+# Help Viewer
+default['osx']['settings']['helpviewer']['devmode'] = true
+
 # Keyboard / Input
 default['osx']['settings']['keyboard']['accented-chars-on-hold'] = false
 default['osx']['settings']['keyboard']['repeat-delay'] = '15'
@@ -78,6 +82,7 @@ default['osx']['settings']['launchservices']['quarantine'] = false
 default['osx']['settings']['login_window']['message_enabled'] = true
 default['osx']['settings']['login_window']['message_nvram'] = true
 default['osx']['settings']['login_window']['message_text'] = "#{node.owner.name} :: If found please e-mail '#{node.owner.email}' :: #{node.owner.company}"
+default['osx']['settings']['login_window']['admin_info'] = true
 
 # Menu Bar
 # Options -> "AirPort", "Battery", "Bluetooth", "Clock", "Displays", "Eject", "RemoteDesktop", 
