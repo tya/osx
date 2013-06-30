@@ -96,3 +96,12 @@ osx_userdefaults "Finder :: Show the Status Bar" do
   value node['osx']['settings']['finder']['window']['showstatusbar']
   notifies :run, 'execute[killall Finder]', :delayed
 end
+
+# Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`, `Nlsv`
+osx_userdefaults "Finder :: Set the viewing style for default windows" do
+  domain "com.apple.finder"
+  key "FXPreferredViewStyle"
+  type "string"
+  value node['osx']['settings']['finder']['window']['viewing-mode']
+  notifies :run, 'execute[killall Finder]', :delayed
+end
