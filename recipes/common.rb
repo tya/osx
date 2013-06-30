@@ -13,3 +13,7 @@ end
 execute "killall Finder" do
   action :nothing
 end
+
+execute "killall SystemUIServer" do
+  action :nothing
+end

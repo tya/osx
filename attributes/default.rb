@@ -62,6 +62,9 @@ default['osx']['settings']['global']['subpixel-third-party'] = '2'
 default['osx']['settings']['global']['resume-applications'] = false
 default['osx']['settings']['global']['new-window-animations'] = false
 default['osx']['settings']['global']['automatic-spellcheck'] = false
+default['osx']['settings']['global']['sidebar-icon-size'] = '1'
+default['osx']['settings']['global']['highlight-color'] = "0.764700 0.976500 0.568600"
+default['osx']['settings']['global']['scrollbars-visibility'] = "WhenScrolling"
 
 # Keyboard / Input
 default['osx']['settings']['keyboard']['accented-chars-on-hold'] = false
@@ -75,6 +78,11 @@ default['osx']['settings']['launchservices']['quarantine'] = false
 default['osx']['settings']['login_window']['message_enabled'] = true
 default['osx']['settings']['login_window']['message_nvram'] = true
 default['osx']['settings']['login_window']['message_text'] = "#{node.owner.name} :: If found please e-mail '#{node.owner.email}' :: #{node.owner.company}"
+
+# Menu Bar
+# Options -> "AirPort", "Battery", "Bluetooth", "Clock", "Displays", "Eject", "RemoteDesktop", 
+#             "TextInput", "TimeMachine", "UniversalAccess", "User", "VPN", "Volume"
+default['osx']['settings']['menubar']['extras'] = [ "AirPort", "Bluetooth", "Volume" ]
 
 # Screensaver
 default['osx']['settings']['screensaver']['enabled'] = true

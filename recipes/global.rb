@@ -57,3 +57,23 @@ osx_userdefaults "OSX Global Settings :: Automatic Spelling Correction" do
   value node['osx']['settings']['global']['automatic-spellcheck']
 end
 
+osx_userdefaults "OSX Global Settings :: Sidebar Icon Size" do
+  domain "NSGlobalDomain"
+  key "NSTableViewDefaultSizeMode"
+  type "int"
+  value node['osx']['settings']['global']['sidebar-icon-size']
+end
+
+osx_userdefaults "OSX Global Settings :: Highlight Color" do
+  domain "NSGlobalDomain"
+  key "AppleHighlightColor"
+  type "string"
+  value node['osx']['settings']['global']['highlight-color']
+end
+
+osx_userdefaults "OSX Global Settings :: Scroll Bar Visibility" do
+  domain "NSGlobalDomain"
+  key "AppleShowScrollBars"
+  type "string"
+  value node['osx']['settings']['global']['scrollbars-visibility']
+end
