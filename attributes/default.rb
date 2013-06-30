@@ -39,6 +39,7 @@ default['osx']['settings']['dock']['disable_spaces_swoosh'] = true
 default['osx']['settings']['dock']['orientation'] = 'bottom'		# options: bottom, left, right
 
 # Finder
+default['osx']['settings']['finder']['allow-quit'] = true
 default['osx']['settings']['finder']['warnonextchange'] = false
 default['osx']['settings']['finder']['warnonemptytrash'] = false
 default['osx']['settings']['finder']['securedelete'] = true

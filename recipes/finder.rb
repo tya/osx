@@ -105,3 +105,11 @@ osx_userdefaults "Finder :: Set the viewing style for default windows" do
   value node['osx']['settings']['finder']['window']['viewing-mode']
   notifies :run, 'execute[killall Finder]', :delayed
 end
+
+osx_userdefaults "Finder :: Allow the user to CMD+Q to quit the Finder application" do
+  domain "com.apple.finder"
+  key "QuitMenuItem"
+  type "bool"
+  value node['osx']['settings']['finder']['allow-quit']
+  notifies :run, 'execute[killall Finder]', :delayed
+end
