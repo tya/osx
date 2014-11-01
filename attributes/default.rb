@@ -95,5 +95,8 @@ default['osx']['settings']['screensaver']['enabled'] = true
 default['osx']['settings']['screensaver']['require_password'] = true
 default['osx']['settings']['screensaver']['password_delay'] = '0'
 
+# Software Update
+default['osx']['settings']['software_updates']['automatic'] = '1'
+
 # Time Machine
 default['osx']['settings']['time_machine']['unsupported_volumes'] = true
