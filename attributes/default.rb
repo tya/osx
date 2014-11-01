@@ -103,6 +103,7 @@ node.default['osx']['settings']['software_updates']['automatic_check'] = true
 node.default['osx']['settings']['software_updates']['automatic_download'] = true
 node.default['osx']['settings']['software_updates']['automatic_install_configdata'] = true
 node.default['osx']['settings']['software_updates']['automatic_install_critical'] = true
+node.default['osx']['settings']['software_updates']['search_frequency'] = '1'
 
 # Time Machine
 node.default['osx']['settings']['time_machine']['unsupported_volumes'] = true

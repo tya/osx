@@ -2,7 +2,7 @@
 #  Cookbook Name: osx
 #  Recipe Name: software_update
 #
-#  Copyright 2014, Alex Howells <alex@howells.me>
+#  Copyright 2013-2014, Alex Howells <alex@howells.me>
 #  See the LICENSE file in the repository root for more information.
 #
 
@@ -14,7 +14,15 @@ osx_userdefaults 'Software Update :: Automatic Search Updates' do
   sudo true
 end
 
-osx_userdefaults 'Software Update :: Automatical Download Updates' do
+osx_userdefaults 'Software Update :: Update Search Frequency' do
+  domain '/Library/Preferences/com.apple.SoftwareUpdate'
+  key 'ScheduleFrequency'
+  type 'int'
+  value node['osx']['settings']['software_updates']['search_frequency']
+  sudo true
+end
+
+osx_userdefaults 'Software Update :: Automatically Download Updates' do
   domain '/Library/Preferences/com.apple.SoftwareUpdate'
   key 'AutomaticDownload'
   type 'bool'
