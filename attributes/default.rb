@@ -79,6 +79,9 @@ node.default['osx']['settings']['keyboard']['repeat-rate'] = '0.02'
 # Launch Services
 node.default['osx']['settings']['launchservices']['quarantine'] = false
 
+# Locate Service
+node.default['osx']['settings']['locate']['enabled'] = true
+
 # Login Window
 node.default['osx']['settings']['login_window']['message_enabled'] = true
 node.default['osx']['settings']['login_window']['message_nvram'] = true
