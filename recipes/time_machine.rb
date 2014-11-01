@@ -7,11 +7,11 @@
 #  See the LICENSE file in the repository root for more information.
 #
 
-include_recipe "osx::common"
+include_recipe 'osx::common'
 
-osx_userdefaults "Time Machine :: Allow unsupported storage in NAS format" do
-  domain "com.apple.systempreference"
-  key "TMShowUnsupportedNetworkVolumes"
-  type "bool"  
+osx_userdefaults 'Time Machine :: Allow unsupported storage in NAS format' do
+  domain 'com.apple.systempreference'
+  key 'TMShowUnsupportedNetworkVolumes'
+  type 'bool'
   value node['osx']['settings']['time_machine']['unsupported_volumes']
 end

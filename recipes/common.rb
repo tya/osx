@@ -6,14 +6,14 @@
 #  See the LICENSE file in the repository root for more information.
 #
 
-execute "killall Dock" do
+execute 'killall Dock' do
   action :nothing
 end
 
-execute "killall Finder" do
+execute 'killall Finder' do
   action :nothing
 end
 
-execute "killall SystemUIServer" do
+execute 'killall SystemUIServer' do
   action :nothing
 end

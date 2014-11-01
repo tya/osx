@@ -11,9 +11,9 @@ default['osx']['settings_user'] = node['current_user']
 default['osx']['settings'] = {}
 
 # Owner Information
-default['owner']['name'] = "Unknown Name"     # Used to print a 'good samaritan'
-default['owner']['email'] = "unknown@email"   # message on the login screen.
-default['owner']['company'] = "Thank You"
+default['owner']['name'] = 'Unknown Name'     # Used to print a 'good samaritan'
+default['owner']['email'] = 'unknown@email'   # message on the login screen.
+default['owner']['company'] = 'Thank You'
 
 # Accessibility
 default['osx']['settings']['accessibility']['cursor_size'] = '1.5'
@@ -32,7 +32,7 @@ default['osx']['settings']['dock']['minimize-to-app'] = true
 default['osx']['settings']['dock']['process-indicators'] = true
 default['osx']['settings']['dock']['flat-2d-style'] = false
 default['osx']['settings']['dock']['shadows'] = false
-default['osx']['settings']['dock']['minimize_effect'] = "scale"
+default['osx']['settings']['dock']['minimize_effect'] = 'scale'
 default['osx']['settings']['dock']['iconsize_normal'] = '40'
 default['osx']['settings']['dock']['iconsize_magnified'] = '96'
 default['osx']['settings']['dock']['disable_spaces_swoosh'] = true
@@ -51,7 +51,7 @@ default['osx']['settings']['finder']['window']['showallfiles'] = false
 default['osx']['settings']['finder']['window']['showposixpath'] = true
 default['osx']['settings']['finder']['window']['showpathbar'] = true
 default['osx']['settings']['finder']['window']['showstatusbar'] = true
-default['osx']['settings']['finder']['window']['viewing-mode'] = "Nlsv"
+default['osx']['settings']['finder']['window']['viewing-mode'] = 'Nlsv'
 
 # Firewall
 default['osx']['settings']['firewall']['enabled'] = true
@@ -65,8 +65,8 @@ default['osx']['settings']['global']['resume-applications'] = false
 default['osx']['settings']['global']['new-window-animations'] = false
 default['osx']['settings']['global']['automatic-spellcheck'] = false
 default['osx']['settings']['global']['sidebar-icon-size'] = '1'
-default['osx']['settings']['global']['highlight-color'] = "0.764700 0.976500 0.568600"
-default['osx']['settings']['global']['scrollbars-visibility'] = "WhenScrolling"
+default['osx']['settings']['global']['highlight-color'] = '0.764700 0.976500 0.568600'
+default['osx']['settings']['global']['scrollbars-visibility'] = 'WhenScrolling'
 
 # Help Viewer
 default['osx']['settings']['helpviewer']['devmode'] = true
@@ -86,9 +86,9 @@ default['osx']['settings']['login_window']['message_text'] = "#{node.owner.name}
 default['osx']['settings']['login_window']['admin_info'] = true
 
 # Menu Bar
-# Options -> "AirPort", "Battery", "Bluetooth", "Clock", "Displays", "Eject", "RemoteDesktop", 
+# Options -> "AirPort", "Battery", "Bluetooth", "Clock", "Displays", "Eject", "RemoteDesktop",
 #             "TextInput", "TimeMachine", "UniversalAccess", "User", "VPN", "Volume"
-default['osx']['settings']['menubar']['extras'] = [ "AirPort", "Bluetooth", "Volume" ]
+default['osx']['settings']['menubar']['extras'] = %w(AirPort Bluetooth Volume)
 
 # Screensaver
 default['osx']['settings']['screensaver']['enabled'] = true
