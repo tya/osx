@@ -15,3 +15,10 @@ osx_userdefaults 'Time Machine :: Allow unsupported storage in NAS format' do
   type 'bool'
   value node['osx']['settings']['time_machine']['unsupported_volumes']
 end
+
+osx_userdefaults 'Time Machine :: Do not offer new disks for backup purposes' do
+  domain 'com.apple.TimeMachine'
+  key 'DoNotOfferNewDisksForBackup'
+  type 'bool'
+  value node['osx']['settings']['time_machine']['disable_offer_new_disks_for_backup']
+end

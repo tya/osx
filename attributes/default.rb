@@ -106,3 +106,4 @@ node.default['osx']['settings']['software_updates']['automatic_install_critical'
 
 # Time Machine
 node.default['osx']['settings']['time_machine']['unsupported_volumes'] = true
+node.default['osx']['settings']['time_machine']['disable_offer_new_disks_for_backup'] = true
