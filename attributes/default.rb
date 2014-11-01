@@ -96,7 +96,10 @@ node.default['osx']['settings']['screensaver']['require_password'] = true
 node.default['osx']['settings']['screensaver']['password_delay'] = '0'
 
 # Software Update
-node.default['osx']['settings']['software_updates']['automatic'] = '1'
+node.default['osx']['settings']['software_updates']['automatic_check'] = true
+node.default['osx']['settings']['software_updates']['automatic_download'] = true
+node.default['osx']['settings']['software_updates']['automatic_install_configdata'] = true
+node.default['osx']['settings']['software_updates']['automatic_install_critical'] = true
 
 # Time Machine
 node.default['osx']['settings']['time_machine']['unsupported_volumes'] = true
