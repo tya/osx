@@ -23,18 +23,20 @@ execute 'Login Window :: Update NVRAM so systems with FDE still see ownership me
   action :nothing
   command "sudo nvram good-samaritan-message='#{node['osx']['settings']['login_window']['message_text']}'"
   subscribes :run, resources(osx_userdefaults: 'Login Window :: Display a message saying who owns this system'), :immediately
-  notifies :run, 'execute[sudo touch /System/Library/Extensions]'
-  notifies :run, 'execute[sudo touch /System/Library/Caches/com.apple.corestorage/EFILoginLocalizations]'
+  notifies :run, 'execute[Login Window :: Ensure presence of /System/Library/Extensions]'
+  notifies :run, 'execute[Login Window :: Ensure presence of EFILoginLocalizations]'
   only_if { node['osx']['settings']['login_window']['message_nvram'] }
 end
 
-execute 'sudo touch /System/Library/Extensions' do
+execute 'Login Window :: Ensure presence of /System/Library/Extensions' do
   action :nothing
+  command 'sudo touch /System/Library/Extensions'
   only_if { File.exist?('/System/Library/Extensions') }
 end
 
-execute 'sudo touch /System/Library/Caches/com.apple.corestorage/EFILoginLocalizations' do
+execute 'Login Window :: Ensure presence of EFILoginLocalizations' do
   action :nothing
+  command 'sudo touch /System/Library/Caches/com.apple.corestorage/EFILoginLocalizations'
   only_if { File.exist?('/System/Library/Caches/com.apple.corestorage/EFILoginLocalizations') }
 end
 
