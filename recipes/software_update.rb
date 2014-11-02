@@ -2,7 +2,7 @@
 #  Cookbook Name: osx
 #  Recipe Name: software_update
 #
-#  Copyright 2013-2014, Alex Howells <alex@howells.me>
+#  Copyright 2013-2014, Aeode Ltd <hello@aeode.com>
 #  See the LICENSE file in the repository root for more information.
 #
 

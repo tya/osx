@@ -22,7 +22,7 @@ attributes and the defaults work for me, but may not be to your taste.
 * Author: Joshua Timberman (<cookbooks@housepub.org>)
 * Author: Ben Bleything (<ben@bleything.net>)
 
-* Copyright 2013, Alex Howells
+* Copyright 2013-2014, Aeode Ltd <hello@aeode.com>
 * Copyright 2011-2013, Joshua Timberman
 
 Licensed under the Apache License, Version 2.0

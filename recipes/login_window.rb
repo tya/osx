@@ -5,7 +5,7 @@
 #   Ensures that your contact details are shown on the login screen in the hope
 #   that a good person will return your laptop if you lose it somewhere.
 #
-#  Copyright 2013, Alex Howells <alex@howells.me>
+#  Copyright 2013-2014, Aeode Ltd <hello@aeode.com>
 #  See the LICENSE file in the repository root for more information.
 #
 
