@@ -13,7 +13,14 @@ node.default['osx']['settings'] = {}
 # Owner Information
 node.default['owner']['name'] = 'Unknown Name'     # Used to print a 'good samaritan'
 node.default['owner']['email'] = 'unknown@email'   # message on the login screen.
-node.default['owner']['company'] = 'Thank You'
+node.default['owner']['company'] = 'Thank You'     # Please would you override me!
+
+# Computer Information
+node.default['osx']['hostname'] = 'computer'
+
+##
+## Operating System Settings
+## ----------------------------------------------------------------------------
 
 # Accessibility
 node.default['osx']['settings']['accessibility']['cursor_size'] = '1.5'
@@ -43,10 +50,14 @@ node.default['osx']['settings']['finder']['allow-quit'] = true
 node.default['osx']['settings']['finder']['warnonextchange'] = false
 node.default['osx']['settings']['finder']['warnonemptytrash'] = false
 node.default['osx']['settings']['finder']['securedelete'] = true
+
 node.default['osx']['settings']['finder']['desktop']['showintharddrives'] = false
 node.default['osx']['settings']['finder']['desktop']['showremovabledrives'] = false
 node.default['osx']['settings']['finder']['desktop']['showextharddrives'] = false
 node.default['osx']['settings']['finder']['desktop']['shownetworkdrives'] = false
+
+# http://secrets.blacktree.com/edit?id=568762
+node.default['osx']['settings']['finder']['window']['newtargetpath'] = 'file:///Users/#{node.current_user}'
 node.default['osx']['settings']['finder']['window']['showallfiles'] = false
 node.default['osx']['settings']['finder']['window']['showposixpath'] = true
 node.default['osx']['settings']['finder']['window']['showpathbar'] = true
@@ -55,6 +66,9 @@ node.default['osx']['settings']['finder']['window']['viewing-mode'] = 'Nlsv'
 
 # Firewall
 node.default['osx']['settings']['firewall']['enabled'] = true
+
+# Gatekeeper
+node.default['osx']['settings']['gatekeeper']['enabled'] = false
 
 # Global Settings
 node.default['osx']['settings']['global']['expanded-save-dialogs'] = true
@@ -83,10 +97,10 @@ node.default['osx']['settings']['launchservices']['quarantine'] = false
 node.default['osx']['settings']['locate']['enabled'] = true
 
 # Login Window
+node.default['osx']['settings']['login_window']['admin_info'] = true
 node.default['osx']['settings']['login_window']['message_enabled'] = true
 node.default['osx']['settings']['login_window']['message_nvram'] = true
 node.default['osx']['settings']['login_window']['message_text'] = "#{node.owner.name} :: If found please e-mail '#{node.owner.email}' :: #{node.owner.company}"
-node.default['osx']['settings']['login_window']['admin_info'] = true
 
 # Menu Bar
 # Options -> "AirPort", "Battery", "Bluetooth", "Clock", "Displays", "Eject", "RemoteDesktop",
@@ -95,8 +109,8 @@ node.default['osx']['settings']['menubar']['extras'] = %w(AirPort Bluetooth Volu
 
 # Screensaver
 node.default['osx']['settings']['screensaver']['enabled'] = true
-node.default['osx']['settings']['screensaver']['require_password'] = true
 node.default['osx']['settings']['screensaver']['password_delay'] = '0'
+node.default['osx']['settings']['screensaver']['require_password'] = true
 
 # Software Update
 node.default['osx']['settings']['software_updates']['automatic_check'] = true
@@ -106,5 +120,5 @@ node.default['osx']['settings']['software_updates']['automatic_install_critical'
 node.default['osx']['settings']['software_updates']['search_frequency'] = '1'
 
 # Time Machine
-node.default['osx']['settings']['time_machine']['unsupported_volumes'] = true
 node.default['osx']['settings']['time_machine']['disable_offer_new_disks_for_backup'] = true
+node.default['osx']['settings']['time_machine']['unsupported_volumes'] = true
